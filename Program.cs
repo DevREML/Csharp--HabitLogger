@@ -1,4 +1,7 @@
-﻿Console.WriteLine("Hello, World!");
+﻿// Calling HabitsDatabase.db
+var database = new Database();
+database.CreateDatabase();
+    
 
 // start menu 
 
