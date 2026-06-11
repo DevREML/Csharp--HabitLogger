@@ -38,6 +38,9 @@ switch (choosenOption)
         break;
     
     case "4":
-        Console.WriteLine($"You have choosen {choosenOption}!: Delete logs!");
+        database.ViewHabit();
+        Console.WriteLine("Select a Id you wish to delete");
+        int deletedId = int.Parse(Console.ReadLine());
+        database.DeleteHabit(deletedId);
         break;
 }

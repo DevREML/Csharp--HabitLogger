@@ -55,5 +55,15 @@ class Database
         command.Parameters.AddWithValue("@Id", Id);
         command.ExecuteNonQuery();
     }
+
+    public void DeleteHabit(int Id)
+    {
+        using var connection = new SqliteConnection("Data Source=habitsDatabase.db");
+        connection.Open();
+        var command = connection.CreateCommand();
+        command.CommandText = "DELETE FROM habits WHERE Id = @Id";
+        command.Parameters.AddWithValue("@Id", Id);
+        command.ExecuteNonQuery();
+    }
   
 }
